@@ -32,3 +32,6 @@ NOTE: Your domain (such as Berkeley) may restrict API console access, if that is
 `python3 watermark.py "path_to_pdf" "folder id" "path_to_roster_csv"`
 
 The script may take some time to run. Student's will not be emailed. A student can find their version of the document by searching for it in google drive. As the uploaded, you can see all versions of the uploaded files in the folder you created, and can delete them when needed. Student's automatically will not be able to download the solutions, nor print them. If they take screenshots, the screenshot will contain their email in the watermark. You can ignore any pdf warnings.
+
+# Performance
+The script was tested using a 58 kb 3 page pdf and 1529 students on a strong internet connection and took about 78 minutes to complete.
