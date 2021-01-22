@@ -8,8 +8,7 @@ An example can be found [here](https://drive.google.com/file/d/1PDTA5BO6plvqe-ek
 
 # Setup
 1. install the following packages:
-`
-pip install pdfrw
+`pip install pdfrw
 
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
