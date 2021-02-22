@@ -121,8 +121,11 @@ def watermark_and_upload(email, file):
 
 def process(email_column="email"):
     """Process each email in the email column of the roster"""
-    r = pd.read_csv(ROSTER, header=0)
-    emails = r[email_column]
+    if ROSTER != None:
+        r = pd.read_csv(ROSTER, header=0)
+        emails = r[email_column]
+    else:
+        emails = [EMAIl]
     i = 0
     for email in emails:
         watermark_and_upload(email, FILE)
@@ -144,8 +147,13 @@ if __name__ == '__main__':
                        type=str,
                        help='the id of the folder where all watermarked \
                        files will be uploaded')
-    parser.add_argument('roster',
-                      metavar='r',
+    parser.add_argument('--roster',
+                      metavar='-r',
+                      type=str,
+                      help='the csv file with "email" column that contains the \
+                      emails of people to share watermarked files with')
+    parser.add_argument('--email',
+                      metavar='-e',
                       type=str,
                       help='the csv file with "email" column that contains the \
                       emails of people to share watermarked files with')
@@ -153,6 +161,7 @@ if __name__ == '__main__':
     ROSTER = args.roster
     FOLDER_ID = args.folder
     FILE = args.file
+    EMAIl = args.email
     process()
 # add documentation with step by step/roadmap
 # CLI
