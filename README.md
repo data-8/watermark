@@ -29,7 +29,11 @@ NOTE: Your domain (such as Berkeley) may restrict API console access, if that is
 2. Create a csv file that has a column called "email". This column should contain the email addresses of the google accounts you want to share the watermarked documents with. Each individual will be shared a version of the file that is watermarked with their email address.
 3. Run the script by calling in the command line
 
-`python3 watermark.py "path_to_pdf" "folder id" "path_to_roster_csv"`
+`python3 watermark.py "path_to_pdf" "folder id" --roster="path_to_roster_csv"`
+
+`python3 watermark.py "path_to_pdf" "folder id" --email="individual_email_address"`
+
+
 
 The script may take some time to run. Student's will not be emailed. A student can find their version of the document by searching for it in google drive. As the uploaded, you can see all versions of the uploaded files in the folder you created, and can delete them when needed. Student's automatically will not be able to download the solutions, nor print them. If they take screenshots, the screenshot will contain their email in the watermark. You can ignore any pdf warnings.
 
